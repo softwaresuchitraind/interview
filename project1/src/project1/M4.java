@@ -1,10 +1,7 @@
 package project1;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /*
  * 
@@ -19,10 +16,19 @@ public class M4
 {
 	public static void main(String[] args)
 	{
-		List<String> asList = Arrays.asList("A","C","D");
 		
-		Map<Object, Object> collect = asList.stream().collect(Collectors.toMap(x->Function.identity(),x->x));
+		char []ch = {'A','B','C','D','E'};
 		
+		Map<Integer, Character> map = new HashMap<>();
+		for(int i=0;i<ch.length;i++)
+		{
+			map.put(i, ch[i]);
+		}
+		
+		for(Map.Entry<Integer, Character> entry : map.entrySet())
+		{
+			System.out.println("key :"+entry.getKey()+"Value "+entry.getValue());
+		}
 	}
 
 }
