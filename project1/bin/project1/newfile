@@ -1,0 +1,16 @@
+UI[Angular/React]-API Gateway--API Proxy
+- Backend service-(class level-pattern-method level)
+@SpringBootApplication
+ ---Componet scanning--configurable class object
+ -Inject the object
+ 
+ //serverurl//duty/apac
+ -@RestController("/duty")
+ 	@Scope(requestScope=""session)
+ 	@postMapping("/apac")
+ 	@Getmapping
+ 	
+ 	
+ 	
+ 	
+ 	
