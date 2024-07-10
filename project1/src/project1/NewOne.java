@@ -23,7 +23,7 @@ public class NewOne
 		Optional<Double> first = employees.stream().map(x->x.salary).sorted(Collections.reverseOrder()).findFirst();
 		if(first.isPresent())
 		{
-			//System.out.println(first.get());
+			System.out.println(first.get());
 		}
 		
 		Optional<Employee> collect = employees.stream().collect(Collectors.maxBy(Comparator.comparing(x->x.salary)));

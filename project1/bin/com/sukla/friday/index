@@ -1,0 +1,18 @@
+
+TABLE -STUDENT
+CLASSID SECTIONID STUDENTID STUDENTMARKS 
+ 1       A			S123		500
+ 2       A			S123		300
+ 3       B			S123		400
+ 1       B			S123		500
+ 
+ SELECT * FROM STUDENT
+ AS "TOP SCORE STUDENTS" 
+ WHERE CLASSID =
+ SELECT CLASID,SECTIONID,MAX(STUDENTMARKS) FROM STUDENT
+ GROUP BY CLASSID,SESSIONID
+
+map
+===
+https://www.google.com/maps/dir/Innovative+Multiplex,+Innovative+Multiplex,+Marathahalli+Village,+Marathahalli,+Bengaluru,+Karnataka/Taj+MG+Road,+Bengaluru,+41%2F3,+Mahatma+Gandhi+Rd,+Yellappa+Garden,+Yellappa+Chetty+Layout,+Sivanchetti+Gardens,+Bengaluru,+Karnataka+560001/@12.9626299,77.6190189,13z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3bae132afb1ce231:0x4f9ed5a8c901a2db!2m2!1d77.699207!2d12.9518006!1m5!1m1!1s0x3bae1686b281d2a3:0xfe17a276bcf050c5!2m2!1d77.6196688!2d12.9733082?hl=en-GB&entry=ttu
+

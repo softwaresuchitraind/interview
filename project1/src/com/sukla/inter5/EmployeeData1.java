@@ -17,17 +17,19 @@ public class EmployeeData1
 		Employee employee3 = new Employee("3", 18, 500.0);
 		Employee employee5 = new Employee("5", 18, 400.0);
 		Employee employee4 = new Employee("4", 30, 14500.0);
+		Employee employee6 = new Employee("4", 30, 15500.0);
 		
-		List<Employee> employees = Arrays.asList(employee1,employee2,employee3,employee4,employee5);
+		List<Employee> employees = Arrays.asList(employee1,employee2,employee3,employee4,employee5,employee6);
 	
-		/*
+		
 		Optional<Employee> youngestEmpoyee = employees.stream()
-				.min(Comparator.comparing(Employee::getEmpSal)
+				.min(Comparator.comparing(Employee::getEmpSal).reversed()
 				.thenComparing(Employee::getAge));
 		youngestEmpoyee.ifPresent(System.out::println);
-		*/
+		
+		/*
 		Optional<Employee> min = employees.stream().min(Comparator.comparing(Employee::getAge));
-				min.ifPresent(System.out::println);		 
+				min.ifPresent(System.out::println);	*/	 
 	}
 
 }

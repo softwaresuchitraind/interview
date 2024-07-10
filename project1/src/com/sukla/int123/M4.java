@@ -20,7 +20,9 @@ public class M4
 	{
 		List<String> phrases= Arrays.asList("sporaacdic perjury","confounded skimming","incumbent jailer","confounded jailer");
 		
-		List<String> collect = phrases.stream().flatMap(p->Arrays.stream(p.split(" "))).map(x->x).sorted().distinct().collect(Collectors.toList());
+		List<String> collect = phrases.stream()
+				.flatMap(p->Arrays.stream(p.split(" ")))
+				.map(x->x).sorted().distinct().collect(Collectors.toList());
 		System.out.println(collect);
 	}
 }

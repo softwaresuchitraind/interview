@@ -25,7 +25,8 @@ public class InterView
 	{
 		
 			
-		Map<Character, Long> collect = input.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()));
+		Map<Character, Long> collect = input.chars().mapToObj(c->(char)c)
+				.collect(Collectors.groupingBy(Function.identity(),LinkedHashMap::new,Collectors.counting()));
 		System.out.println(collect);
 		StringBuilder output = new StringBuilder();
 		collect.forEach((character,count)->output.append(character).append(count));
