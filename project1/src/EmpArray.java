@@ -1,6 +1,6 @@
 import java.util.Arrays;
 /*
- * Input: digits = [1,2,3]Output: [1,2,4
+ * Input: digits = [1,2,3]Output: [1,2,4]
  * */
 public class EmpArray
 {

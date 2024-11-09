@@ -7,7 +7,7 @@ public class M10
 			Integer arr[] = {1,2,3,4,5,6,7,8};
 			int sizeOfSubArray = 3;
 			splitArray(arr, sizeOfSubArray);
-			
+			//arr[] = {1,2,3,4,5,6,7,8};
 			//output
 			//[1,2,3][4,5,6][7,8]
 			

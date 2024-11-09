@@ -20,9 +20,9 @@ public class EmpData
 	       List<String> collect = employees.stream()
 	       					 .map(x->x.getDepartment().replace("HR", "HR MANAGER")+"--")
 	       					 .collect(Collectors.toList());
-	       
-	       Consumer<Employee> consumer = (x->System.out.print(x));
-	       System.out.println(consumer);
+	       System.out.println(collect);
+	       //Consumer<Employee> consumer = (x->System.out.print(x));
+	       //System.out.println(consumer);
 	       					
 	       
 	}

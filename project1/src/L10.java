@@ -45,8 +45,6 @@ public class L10
 		l1.add(30);
 		l1.add(49);
 		l1.iterate();
-		l1.delete();
-		l1.iterate();
 		
 	}
 }

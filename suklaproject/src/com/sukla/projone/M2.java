@@ -14,7 +14,8 @@ public class M2
 		{ "apple", "banana", "promagnate", "grape" };
 		Arrays.stream(fruits)
 				.collect(Collectors.toMap(x -> x, String::length))
-				.entrySet().stream()
+				.entrySet()
+				.stream()
 				.sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))
 				.findFirst()
 				.ifPresent(System.out::println);
