@@ -1,4 +1,6 @@
 package javainterview;
+
+//Singleton Class
 class Printer
 {
 	private static volatile Printer INSTANCE=null; 
