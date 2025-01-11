@@ -12,6 +12,10 @@ public class M50
 		String str = "My name is Suchitra Kumar Sukla";
 		String[] strArr = str.split("");
 		Map<String, Long> map = Arrays.stream(strArr).collect(Collectors.groupingBy(String::toLowerCase,Collectors.counting()));
-		map.forEach((k,v)->System.out.println(k+" "+v));
+		//map.forEach((k,v)->System.out.println(k+" "+v));
+		for(Map.Entry<String,Long> map1: map.entrySet())
+		{
+			System.out.println(map1.getKey()+" "+map1.getValue());
+		}
 	}
 }
