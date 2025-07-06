@@ -1,0 +1,26 @@
+SELECT * FROM public.customers
+LIMIT 3 OFFSET 1;
+
+SELECT * FROM public.customers
+LIMIT 3 OFFSET 2;
+
+SELECT * FROM public.customers
+LIMIT 3;
+
+SELECT first_name, last_name, age
+FROM public.customers
+INNER JOIN public.customer_ages
+ON 
+public.customer_ages.customer_id =public.customers.id;
+
+SELECT public.customers.id,first_name, last_name, age,customer_id,public.customer_ages.id
+FROM public.customers
+INNER JOIN public.customer_ages
+ON 
+public.customer_ages.customer_id =public.customers.id;
+
+=====================================================
+SELECT public.customers.id,first_name,last_name,age
+FROM public.customers,public.customer_ages
+WHERE public.customer_ages.customer_id=public.customers.id;
+

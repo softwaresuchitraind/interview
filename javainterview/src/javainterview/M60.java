@@ -27,6 +27,21 @@ public class M60
 		for(int i=0;i<expression.length();i++)
 		{
 			char c = expression.charAt(i);
+			
+			//if character is a digit, parse the number
+			if(Character.isDigit(c))
+			{
+				int num = 0;
+				while(i<expression.length() && Character.isDigit(expression.charAt(i)))
+				{
+					num = num*10+(expression.charAt(i)-'0')
+					i++;
+				}
+				i--;
+				numbers.push((double) num);
+			}
+			
+			
 		}
 		return 0;
 	}
