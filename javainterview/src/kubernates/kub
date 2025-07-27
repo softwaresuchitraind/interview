@@ -1,0 +1,13 @@
+self Managed/Bare Metal k8s Cluster
+miniqube
+kubeadm
+kubespary
+
+
+Managed k8s Cluster
+EKS		--> Elastic Kubernetes Service(AWS Cloud)
+AKS  	--> Azure Kubernate Service (Azure cloud)
+GKE		-->Google Kubernates Engine(GCP ---> Google Cloud Platform)
+IKE		-->IBM Kubernates Engine(IBM Cloud)
+
+labs.play-with-k8s.com

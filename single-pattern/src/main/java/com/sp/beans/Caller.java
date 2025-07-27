@@ -1,6 +1,6 @@
 package com.sp.beans;
 
-import com.sp.eagerinstantiation.pattern.VoiceRecognizer;
+import com.sp.lazyinstantiation.pattern.*;
 
 public class Caller
 {
