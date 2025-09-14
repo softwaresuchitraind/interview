@@ -2,7 +2,7 @@ package javainterview;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//print map using java
 public class M95
 {
 	public static void main(String[] args)
