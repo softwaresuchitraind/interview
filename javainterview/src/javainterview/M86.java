@@ -68,11 +68,11 @@ public class M86
 		Employee86 emp5 = new Employee86("Eve","Sales",105000.0);
 		Employee86 emp6 = new Employee86("Frank","Sales",102000.0);
 		
-		
+		/*
 		List<Employee86> topEarners = Arrays.asList(emp1,emp2,emp3,emp4,emp5,emp6);
 		topEarners.stream().collect(Collectors.groupingBy(Employee86::getDept,))
 		
-		
+		*/
 		
 	}
 }
