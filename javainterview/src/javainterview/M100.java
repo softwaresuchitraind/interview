@@ -10,7 +10,8 @@ public class M100
 {
 	public static void main(String[] args)
 	{
-		//List<Object> Marks = List.of(85,90,78,95,88);
+		List<Object> Marks = List.of(85,90,78,95,88);
+		
 		
 	}
 }

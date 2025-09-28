@@ -1,0 +1,7 @@
+SELECT accountno, COUNT(*) AS duplicate_count
+FROM Accounts
+WHERE country = 'UK'
+GROUP BY accountno
+HAVING COUNT(*) > 1;
+
+======================================
