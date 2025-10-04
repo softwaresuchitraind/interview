@@ -4,4 +4,91 @@ WHERE country = 'UK'
 GROUP BY accountno
 HAVING COUNT(*) > 1;
 
-======================================
+======================================mysql=======
+
+DELETE A
+FROM Accounts A
+JOIN (
+    SELECT accountno, MAX(created_at) AS keep_created
+    FROM Accounts
+    WHERE country = 'UK'
+    GROUP BY accountno
+) B
+ON A.accountno = B.accountno
+AND A.country = 'UK'
+AND A.created_at < B.keep_created;
+
+
+==================oracle==================
+
+DELETE FROM Accounts
+WHERE country = 'UK'
+  AND ROWID NOT IN (
+      SELECT MAX(ROWID)
+      FROM Accounts
+      WHERE country = 'UK'
+      GROUP BY accountno
+  );
+  
+  
+  ===============================
+  CREATE TABLE Accounts (
+    accountno VARCHAR(100),
+    account_name VARCHAR(100),
+    balance DECIMAL(15,2),
+    country VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+DESC Accounts;
+
+INSERT INTO Accounts (accountno, account_name, balance, country, created_at) VALUES
+('ACC1006', 'Deepak Joshi', 8900.60,  'France',   CURRENT_TIMESTAMP);
+
+('ACC1001', 'Amit Kumar',   25000.50, 'India',    CURRENT_TIMESTAMP),
+('ACC1002', 'Priya Sharma', 18000.75, 'USA',      CURRENT_TIMESTAMP),
+('ACC1003', 'Neha Verma',   32000.00, 'UK',       CURRENT_TIMESTAMP),
+('ACC1003', 'Neha Verma',   32000.00, 'UK',       CURRENT_TIMESTAMP),
+('ACC1001', 'Rahul Das',    15000.25, 'Canada',   CURRENT_TIMESTAMP), -- duplicate accountno
+('ACC1004', 'Sunita Patil', 5000.00,  'India',    CURRENT_TIMESTAMP),
+('ACC1004', 'Sunita Patil', 5000.00,  'India',    CURRENT_TIMESTAMP),
+('ACC1005', 'Ravi Singh',   72000.10, 'Germany',  CURRENT_TIMESTAMP),
+('ACC1002', 'Anjali Gupta', 45000.75, 'Australia',CURRENT_TIMESTAMP), -- duplicate accountno
+('ACC1006', 'Deepak Joshi', 8900.60,  'France',   CURRENT_TIMESTAMP),
+('ACC1007', 'Sneha Nair',   12000.00, 'UK',    CURRENT_TIMESTAMP),
+('ACC1007', 'Sneha Nair',   12000.00, 'UK',    CURRENT_TIMESTAMP),
+('ACC1003', 'Manoj Yadav',  66000.85, 'UK',CURRENT_TIMESTAMP); -- duplicate accountno
+
+
+SELECT accountno, COUNT(*) AS duplicate_count
+FROM Accounts
+WHERE country = 'UK'
+GROUP BY accountno
+HAVING COUNT(*) > 1;
+
+
+SELECT accountno,count(*) as DUPCOUNT
+from ACCOUNTS
+where
+country='UK'
+group by accountno
+having count(*)>1
+
+
+
+select * from accounts;
+
+DELETE FROM Accounts where country='UK' and  rowid not in (select max(rowid) from accounts where country='UK' group by accountno );
+
+
+
+
+DELETE FROM Accounts
+WHERE country = 'UK'
+  AND ROWID NOT IN (
+      SELECT MAX(ROWID)
+      FROM Accounts
+      WHERE country = 'UK'
+      GROUP BY accountno
+  );
+  
