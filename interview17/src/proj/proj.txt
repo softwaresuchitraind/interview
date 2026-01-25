@@ -1,1 +1,2 @@
 Agile tool- Rally
+ER Diagram- visio or rational rose or deaw.io
