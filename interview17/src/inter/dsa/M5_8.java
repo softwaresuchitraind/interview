@@ -43,7 +43,7 @@ public class M5_8
 	{
 		int nums[] = {0,2,1,5,3,4};
 	
-		Object[]result = IntStream.range(0, nums.length).mapToObj(i->nums[nums[i]]).toArray();
+		int[]result = IntStream.range(0, nums.length).map(i->nums[nums[i]]).toArray();
 		System.out.println(Arrays.toString(result));
 	}
 }
