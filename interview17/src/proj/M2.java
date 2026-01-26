@@ -11,5 +11,36 @@ package proj;
  * */
 public class M2
 {
+	public static void main(String[] args)
+	{
+		String input ="0521 1500 7865 1476";
+		cardcheck(input);
+	}
+	public static void cardcheck(String input)
+	{
+		
+		if(input.length()<13)
+		{
+			System.out.println("Card number is invalid (length issue)");
+			return;
+		}
+		
+		String str=input.replace("\\s+", "");
+		char twenlve=str.charAt(11);
+		char thirteen=str.charAt(12);
+		
+		if(twenlve=='0' && thirteen=='0')
+		{
+			System.out.println("Card is Invalid");
+		}
+		else if(twenlve=='0' || thirteen=='0')
+		{
+			System.out.println("Card is not a primary card");
+		}
+		else
+		{
+			System.out.println("Card is primary card");
+		}
+	}
 
 }
