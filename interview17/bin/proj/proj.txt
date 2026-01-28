@@ -1,2 +1,13 @@
 Agile tool- Rally
 ER Diagram- visio or rational rose or deaw.io
+pmd
+LOG-Grafana,DataDog,sumologic,Azure-----App insigts
+
+Performance testing : Jmeter
+==============================
+--->Load testing, Stress Testing,Endurance testing
+
+
+#Automation testing using selenium or playwright.
+
+Code
